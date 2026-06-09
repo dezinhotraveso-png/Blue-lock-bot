@@ -1,21 +1,10 @@
-// Sistema de segurança para evitar que o bot quebre na inicialização se o dotenv não estiver instalado
-try {
-    require('dotenv').config();
-} catch (e) {
-    console.log('[Backup GitHub] Biblioteca "dotenv" não encontrada. Tentando instalar dinamicamente...');
-    try {
-        const { execSync } = require('child_process');
-        execSync('npm install dotenv --no-save', { stdio: 'ignore' });
-        require('dotenv').config();
-        console.log('[Backup GitHub] "dotenv" instalado e carregado com sucesso!');
-    } catch (err) {
-        console.error('[Backup GitHub] Erro ao carregar ou instalar o dotenv automaticamente:', err.message);
-    }
-}
+// Importa o módulo 'path' primeiro para poder ser usado na configuração do dotenv
+const path = require('path');
+// Força o carregamento do ficheiro .env na pasta raiz do projeto
+require('dotenv').config({ path: path.resolve(process.cwd(), '.env') });
 
 const { EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 
 // Lista de pastas e ficheiros que o bot deve ignorar ao fazer o upload para o GitHub
@@ -60,65 +49,84 @@ module.exports = {
     defaultMemberPermissions: PermissionFlagsBits.Administrator,
     
     async execute(message, args, client, context) {
-        // Tenta ler as variáveis do .env; se não existirem, usa os dados padrão definidos
         const OWNER = process.env.GITHUB_OWNER || 'dezinhotraveso-png';
         const REPO = process.env.GITHUB_REPO || 'Blue-lock-bot';
         const TOKEN = process.env.GITHUB_TOKEN;
 
-        // 1. Verificação de segurança para garantir que o Token existe no .env
-        if (!TOKEN || TOKEN.includes('COLOQUE_SEU_NOVO_TOKEN_AQUI')) {
-            return message.reply({
-                content: '❌ **Falta o teu token válido do GitHub no ficheiro `.env`!** \nComo os teus tokens antigos foram partilhados no chat, eles foram desativados por segurança.\n\n**Como resolver:**\n1. Cria um novo token em `github.com/settings/tokens`.\n2. Edita o teu ficheiro `.env` e coloca o token correto na linha `GITHUB_TOKEN=ghp_...\`.\n3. **Reinicia** o teu bot no painel da Square Cloud.'
-            });
+        const msgStatus = await message.reply('🔍 A iniciar o diagnóstico do ambiente de backup...');
+
+        // === PASSO 1: DIAGNÓSTICO DO FICHEIRO .ENV ===
+        const caminhoEnv = path.resolve(process.cwd(), '.env');
+        const envExiste = fs.existsSync(caminhoEnv);
+
+        if (!envExiste) {
+            const embedErroEnv = new EmbedBuilder()
+                .setColor('#FF0000')
+                .setTitle('❌ DIAGNÓSTICO: Ficheiro .env não encontrado!')
+                .setDescription(`O bot não conseguiu encontrar o ficheiro \`.env\` na pasta raiz (\`${process.cwd()}\`).`)
+                .addFields(
+                    { name: '💡 Como Corrigir na Square Cloud:', value: '1. Abre o gestor de arquivos da Square Cloud.\n2. Verifica se o ficheiro se chama **exatamente** \`.env\` (não pode ser \`.evn\`, \`config.env\` ou \`.env.txt\`).\n3. Garante que ele está na pasta raiz (onde está o \`index.js\`), e não dentro de subpastas.' }
+                );
+            return msgStatus.edit({ content: null, embeds: [embedErroEnv] });
         }
 
-        const msgStatus = await message.reply('🔍 A verificar o ambiente e a testar a ligação com o GitHub...');
+        if (!TOKEN) {
+            const conteudoEnv = fs.readFileSync(caminhoEnv, 'utf8');
+            const contemToken = conteudoEnv.includes('GITHUB_TOKEN');
+            
+            const embedErroToken = new EmbedBuilder()
+                .setColor('#FF0000')
+                .setTitle('❌ DIAGNÓSTICO: Token do GitHub em falta!')
+                .setDescription(`O ficheiro \`.env\` existe, mas o bot não conseguiu ler a variável \`GITHUB_TOKEN\`.`)
+                .addFields(
+                    { name: 'Leitura do ficheiro .env:', value: contemToken ? 'A variável `GITHUB_TOKEN` está escrita no ficheiro, mas pode estar mal formatada ou o bot precisa de ser reiniciado.' : 'A variável `GITHUB_TOKEN` **não** está presente dentro do ficheiro `.env`.' },
+                    { name: '💡 Como Corrigir:', value: 'Garante que copiaste o token novo para o teu `.env` exatamente desta forma:\n`GITHUB_TOKEN=ghp_teuTokenAqui` (sem espaços extras).\n\nDepois, clica em **RESTART** no painel da Square Cloud.' }
+                );
+            return msgStatus.edit({ content: null, embeds: [embedErroToken] });
+        }
 
-        // 2. Garante a instalação automática da biblioteca oficial do GitHub caso falte na Square Cloud
+        // === PASSO 2: TESTAR LIGAÇÃO À API DO GITHUB ===
         let Octokit;
         try {
             Octokit = require('@octokit/rest').Octokit;
         } catch (e) {
-            await msgStatus.edit('📦 A instalar a biblioteca `@octokit/rest` na Square Cloud, aguarda um momento...');
+            await msgStatus.edit('📦 A instalar a biblioteca `@octokit/rest` na Square Cloud...');
             try {
                 execSync('npm install @octokit/rest --no-save', { stdio: 'ignore' });
                 Octokit = require('@octokit/rest').Octokit;
-                await msgStatus.edit('✅ Biblioteca instalada com sucesso! A testar a ligação...');
             } catch (err) {
-                console.error(err);
-                return msgStatus.edit('❌ Falha ao tentar instalar automaticamente a dependência `@octokit/rest`. Tenta instalá-la no teu package.json.');
+                return msgStatus.edit('❌ Falha crítica ao instalar a dependência `@octokit/rest`. Adiciona-a ao `package.json`.');
             }
         }
 
-        const octokit = new Octokit({
-            auth: TOKEN 
-        });
+        const octokit = new Octokit({ auth: TOKEN });
 
-        // 3. Valida se o repositório existe e se o bot tem permissão de escrita
         try {
+            await msgStatus.edit('📡 A testar permissões do Token com o GitHub...');
             await octokit.repos.get({
                 owner: OWNER,
                 repo: REPO
             });
         } catch (error) {
-            let descErro = 'Não foi possível aceder ao teu repositório no GitHub.';
-            if (error.status === 404) {
-                descErro = `O repositório \`${OWNER}/${REPO}\` não foi encontrado.\n\n**O que verificar:**\n- Tens a certeza de que criaste o repositório com o nome exato \`Blue-lock-bot\` no teu GitHub?\n- O teu nome de utilizador está correto no ficheiro \`.env\`?`;
-            } else if (error.status === 401) {
-                descErro = 'O teu `GITHUB_TOKEN` é inválido ou já expirou. Cria um novo Token Classic no GitHub com acesso de escrita a repositórios (`repo`).';
-            }
+            let descErro = 'Erro ao aceder à API do GitHub.';
             
-            const embedErroConexao = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setTitle('❌ Erro de Autenticação / Conexão')
-                .setDescription(descErro)
-                .addFields({ name: 'Detalhes Técnicos', value: `\`\`\`js\nStatus: ${error.status}\nErro: ${error.message}\n\`\`\`` });
+            if (error.status === 404) {
+                descErro = `O repositório \`${OWNER}/${REPO}\` não foi encontrado.\n\n**Causas Prováveis:**\n1. O repositório com o nome exato \`Blue-lock-bot\` ainda não foi criado na tua conta do GitHub \`dezinhotraveso-png\`.\n2. O repositório é Privado e o teu Token não tem a permissão \`repo\` marcada para o ver.`;
+            } else if (error.status === 401) {
+                descErro = `O teu \`GITHUB_TOKEN\` é inválido ou foi cancelado pelo GitHub.\n\n**Como resolver:**\nComo enviaste os teus tokens no chat, o GitHub cancelou-os de imediato por segurança. Tens de ir a [github.com/settings/tokens](https://github.com/settings/tokens), gerar um **novo** token, colá-lo no teu \`.env\` e reiniciar o bot na Square Cloud sem enviar o código a ninguém!`;
+            }
 
-            return msgStatus.edit({ content: null, embeds: [embedErroConexao] });
+            const embedErroAPI = new EmbedBuilder()
+                .setColor('#FF0000')
+                .setTitle('❌ DIAGNÓSTICO: Falha na Conexão com o GitHub')
+                .setDescription(descErro)
+                .addFields({ name: 'Dados Utilizados:', value: `👤 **Dono:** \`${OWNER}\`\n📁 **Repositório:** \`${REPO}\`\n🔑 **Token (Primeiros digitos):** \`${TOKEN.substring(0, 10)}...\`` });
+
+            return msgStatus.edit({ content: null, embeds: [embedErroAPI] });
         }
 
+        // === PASSO 3: EFETUAR O UPLOAD DOS FICHEIROS ===
         try {
-            // 4. Mapeia e analisa os ficheiros do bot localmente
             const diretorioRaiz = process.cwd();
             const arquivosParaEnviar = obterArquivosRecursivo(diretorioRaiz);
 
@@ -126,12 +134,11 @@ module.exports = {
                 return msgStatus.edit('❌ Nenhum ficheiro elegível para backup foi encontrado.');
             }
 
-            await msgStatus.edit(`🚀 A preparar o envio de **${arquivosParaEnviar.length} ficheiros** para o teu repositório \`${OWNER}/${REPO}\`...`);
+            await msgStatus.edit(`🚀 Ligação validada! A enviar **${arquivosParaEnviar.length} ficheiros** para \`${OWNER}/${REPO}\`...`);
 
             let arquivosEnviados = 0;
             let arquivosAtualizados = 0;
 
-            // 5. Envia cada ficheiro para o repositório no GitHub
             for (const arquivo of arquivosParaEnviar) {
                 const conteudoLocal = fs.readFileSync(arquivo.caminhoAbsoluto);
                 const conteudoBase64 = conteudoLocal.toString('base64');
@@ -149,7 +156,6 @@ module.exports = {
                         shaExistente = data.sha;
                     }
                 } catch (err) {
-                    // Ignora erro 404 porque significa que o ficheiro ainda não existe no repositório remoto (ficheiro novo)
                     if (err.status !== 404) throw err;
                 }
 
@@ -159,7 +165,7 @@ module.exports = {
                     path: arquivo.caminhoRelativo,
                     message: `Backup automático: ${arquivo.caminhoRelativo}`,
                     content: conteudoBase64,
-                    sha: shaExistente || undefined // Se o ficheiro já existia, fornece o sha para atualizar, se não, cria-o
+                    sha: shaExistente || undefined
                 });
 
                 if (shaExistente) {
@@ -169,7 +175,6 @@ module.exports = {
                 }
             }
 
-            // 6. Envia a resposta final de sucesso ao utilizador
             const embedSucesso = new EmbedBuilder()
                 .setColor('#2DBA4E')
                 .setTitle('🚀 BACKUP CONCLUÍDO COM SUCESSO!')
@@ -181,7 +186,7 @@ module.exports = {
                     { name: '🔄 Ficheiros Atualizados', value: `${arquivosAtualizados}`, inline: true },
                     { name: '📊 Total Processado', value: `${arquivosParaEnviar.length}`, inline: true }
                 )
-                .setFooter({ text: '⚽ Blue Lock System • Segurança e Proteção' })
+                .setFooter({ text: '⚽ Blue Lock System' })
                 .setTimestamp();
 
             await msgStatus.edit({ content: null, embeds: [embedSucesso] });
@@ -191,13 +196,13 @@ module.exports = {
             
             let extraDica = '';
             if (error.message.includes('empty repository') || error.message.includes('branch')) {
-                extraDica = '\n\n💡 **Dica:** O teu repositório no GitHub parece estar vazio. Acede ao site do GitHub, cria um ficheiro rápido com o nome `README.md` lá no teu repositório para ativar a branch inicial e tenta usar o comando novamente!';
+                extraDica = '\n\n💡 **Dica:** O teu repositório no GitHub está vazio. Acede ao teu repositório no site do GitHub, cria um ficheiro rápido com o nome `README.md` por lá para ativares a branch inicial e tenta novamente!';
             }
 
             const embedErro = new EmbedBuilder()
                 .setColor('#FF0000')
                 .setTitle('❌ Falha ao Enviar Ficheiros')
-                .setDescription(`Ocorreu um erro ao realizar o upload para o GitHub.${extraDica}`)
+                .setDescription(`Ocorreu um erro ao realizar o upload dos ficheiros.${extraDica}`)
                 .addFields({ name: 'Detalhe Técnico', value: `\`\`\`js\n${error.message.substring(0, 500)}\n\`\`\`` });
 
             await msgStatus.edit({ content: null, embeds: [embedErro] });
