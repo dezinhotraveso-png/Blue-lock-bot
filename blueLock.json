@@ -1,0 +1,1042 @@
+{
+  "jogadores": {
+    "886349533016104960": {
+      "id": "886349533016104960",
+      "nome": "Novato",
+      "posicao": "meia",
+      "ego": null,
+      "perna": "🦵 Destro",
+      "rolls": {
+        "estilo": null,
+        "familia": null,
+        "ego": null,
+        "perna": null,
+        "prodigio": 0,
+        "talento": null,
+        "armas": null,
+        "estilo-fisico": null,
+        "dons": null,
+        "monstro": null,
+        "dominancia": null
+      },
+      "status": {
+        "finalizacao": 0,
+        "passe": 0,
+        "desarme": 0,
+        "drible": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "egosDesbloqueados": [],
+      "egoAtivo": null
+    },
+    "1453415296634322944": {
+      "id": "1453415296634322944",
+      "nome": "alter_dawn",
+      "posicao": "meia",
+      "ego": null,
+      "perna": "🦵 Destro",
+      "rolls": {
+        "estilo": null,
+        "familia": null,
+        "ego": null,
+        "perna": null,
+        "prodigio": 0,
+        "talento": null,
+        "armas": null,
+        "estilo-fisico": null,
+        "dons": null,
+        "monstro": null,
+        "dominancia": null
+      },
+      "status": {
+        "finalizacao": 0,
+        "passe": 0,
+        "desarme": 0,
+        "drible": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "egosDesbloqueados": [],
+      "egoAtivo": null,
+      "imagem": "https://i.pinimg.com/736x/cc/24/08/cc2408f04dcac171ff0bfec8c34fb48e.jpg",
+      "rollsDisponiveis": {},
+      "habilidades": {}
+    },
+    "1479604053326434334": {
+      "id": "1479604053326434334",
+      "nome": "a_fu.cking_train",
+      "posicao": "meia",
+      "ego": null,
+      "perna": "🦵 Destro",
+      "rolls": {
+        "estilo": null,
+        "familia": null,
+        "ego": null,
+        "perna": null,
+        "prodigio": 0,
+        "talento": null,
+        "armas": null,
+        "estilo-fisico": null,
+        "dons": null,
+        "monstro": null,
+        "dominancia": null
+      },
+      "status": {
+        "finalizacao": 0,
+        "passe": 0,
+        "desarme": 0,
+        "drible": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "egosDesbloqueados": [],
+      "egoAtivo": null
+    },
+    "1313323679181967465": {
+      "nome": "2395340986",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {}
+    },
+    "772060684417499156": {
+      "nome": "dezinhoz",
+      "status": {
+        "finalizacao": 100,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0,
+        "energia": 98
+      },
+      "rolls": {},
+      "rollsDisponiveis": {
+        "arma": 3
+      },
+      "pontosTreino": 0,
+      "ultimoTreino": "Sat May 30 2026",
+      "ultimoTreinoTimestamp": 1780153025954,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      },
+      "posicao": "MEIA",
+      "habilidades": {}
+    },
+    "1288909739840901173": {
+      "nome": "oliveir___",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0,
+        "energia": 99
+      },
+      "rolls": {},
+      "rollsDisponiveis": {}
+    },
+    "1435070343709593720": {
+      "nome": "carro0429",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      }
+    },
+    "1401752009723609109": {
+      "nome": "kant_yugo",
+      "status": {
+        "finalizacao": 25,
+        "drible": 25,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 25,
+        "fisico": 25,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 25
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      },
+      "habilidades": {}
+    },
+    "1080279970120732682": {
+      "nome": "86vx",
+      "status": {
+        "finalizacao": 25,
+        "drible": 25,
+        "passe": 25,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      },
+      "habilidades": {}
+    },
+    "1429658248738246768": {
+      "nome": "meridiann_",
+      "status": {
+        "finalizacao": 0,
+        "drible": 25,
+        "passe": 25,
+        "desarme": 25,
+        "velocidade": 25,
+        "fisico": 0,
+        "interceptacao": 25,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      },
+      "habilidades": {}
+    },
+    "410125035085496320": {
+      "nome": "yangb_souza",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "pdr": 0
+      }
+    },
+    "920475205879619614": {
+      "nome": "daarkmiel",
+      "status": {
+        "finalizacao": 25,
+        "drible": 0,
+        "passe": 25,
+        "desarme": 0,
+        "velocidade": 25,
+        "fisico": 25,
+        "interceptacao": 25,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {}
+    },
+    "892080349021081702": {
+      "id": "892080349021081702",
+      "nome": "shinowakasaki",
+      "posicao": "ZAGUEIRO",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0,
+        "bloqueio": 0,
+        "marcacao": 0,
+        "antecipacao": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      }
+    },
+    "1170420771206729828": {
+      "nome": "batataoeosfnaf_57457",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {}
+    },
+    "1393285776883712021": {
+      "id": "1393285776883712021",
+      "nome": "tottaboy",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 25,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1366813437606232135": {
+      "id": "1366813437606232135",
+      "nome": "shipsahur",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 25,
+        "drible": 25,
+        "passe": 25,
+        "desarme": 25,
+        "velocidade": 25,
+        "fisico": 25,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1475323630299648162": {
+      "id": "1475323630299648162",
+      "nome": "kiu04343",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 0,
+        "drible": 25,
+        "passe": 25,
+        "desarme": 50,
+        "velocidade": 25,
+        "fisico": 25,
+        "interceptacao": 25,
+        "defesaGk": 0,
+        "dominio": 25
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1477432799958011904": {
+      "id": "1477432799958011904",
+      "nome": "nero_karalho",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 25,
+        "drible": 25,
+        "passe": 25,
+        "desarme": 25,
+        "velocidade": 25,
+        "fisico": 25,
+        "interceptacao": 25,
+        "defesaGk": 0,
+        "dominio": 25
+      },
+      "pontosBase": 0,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    }
+  },
+  "partidas": {
+    "partida_1505614096320565369": {
+      "timeCasa": "<timeCasa>",
+      "timeFora": "<timeFora>",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": "1366813437606232135",
+      "posseNome": "shipsahur",
+      "minuto": 2.5,
+      "tempo": "1º Tempo",
+      "ativa": true,
+      "canal": "1505614096320565369",
+      "jogadores": {
+        "1366813437606232135": {
+          "nome": "shipsahur",
+          "setor": "C8",
+          "time": "<timeCasa>",
+          "timeTipo": "casa",
+          "posicao": "centro_avante",
+          "posicaoNome": "Centro Avante"
+        },
+        "892080349021081702": {
+          "nome": "shinowakasaki",
+          "setor": "C8",
+          "time": "<timeFora>",
+          "timeTipo": "fora",
+          "posicao": "meio_ofensivo",
+          "posicaoNome": "Meio Ofensivo"
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": "C13",
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {
+        "1366813437606232135": {
+          "contra": "892080349021081702",
+          "turnos": 1
+        }
+      },
+      "faltas": {},
+      "times": {
+        "<timeCasa>": {
+          "jogadores": [
+            "1366813437606232135"
+          ],
+          "gols": 0
+        },
+        "<timeFora>": {
+          "jogadores": [
+            "892080349021081702"
+          ],
+          "gols": 0
+        }
+      },
+      "placar": {
+        "casa": 0,
+        "fora": 0
+      }
+    },
+    "partida_1505614171562053672": {
+      "timeCasa": "pirocudosfc",
+      "timeFora": "bucetudosfc",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": "772060684417499156",
+      "posseNome": "dezinhoz",
+      "minuto": 7,
+      "ativa": true,
+      "canal": "1505614171562053672",
+      "jogadores": {
+        "1479604053326434334": {
+          "nome": "a_fu.cking_train",
+          "setor": 17,
+          "time": "pirocudosfc",
+          "timeTipo": "casa",
+          "posicao": "Atacante"
+        },
+        "772060684417499156": {
+          "nome": "dezinhoz",
+          "setor": 8,
+          "time": "bucetudosfc",
+          "timeTipo": "fora",
+          "posicao": "Atacante"
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": 8,
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {},
+      "faltas": {},
+      "times": {
+        "pirocudosfc": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "bucetudosfc": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "casa": {
+          "jogadores": [
+            "1479604053326434334"
+          ]
+        },
+        "fora": {
+          "jogadores": [
+            "772060684417499156"
+          ]
+        }
+      }
+    },
+    "partida_1505614333697200180": {
+      "timeCasa": "bastard",
+      "timeFora": "pxg",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": "1313323679181967465",
+      "posseNome": "2395340986",
+      "minuto": 4,
+      "ativa": false,
+      "canal": "1505614333697200180",
+      "jogadores": {
+        "772060684417499156": {
+          "nome": "dezinhoz",
+          "setor": "C1",
+          "time": "bastard",
+          "timeTipo": "casa",
+          "posicao": "Goleiro",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "drible": 0,
+            "passe": 0,
+            "desarme": 0,
+            "velocidade": 0,
+            "fisico": 0,
+            "interceptacao": 0,
+            "defesaGk": 0,
+            "dominio": 0
+          }
+        },
+        "1313323679181967465": {
+          "nome": "2395340986",
+          "setor": "C30",
+          "time": "pxg",
+          "timeTipo": "fora",
+          "posicao": "Goleiro",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "drible": 0,
+            "passe": 0,
+            "desarme": 0,
+            "velocidade": 0,
+            "fisico": 0,
+            "interceptacao": 0,
+            "defesaGk": 0,
+            "dominio": 0
+          }
+        },
+        "1479604053326434334": {
+          "nome": "a_fu.cking_train",
+          "setor": "C3",
+          "time": "bastard",
+          "timeTipo": "casa",
+          "posicao": "Zagueiro",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "passe": 0,
+            "desarme": 0,
+            "drible": 0,
+            "velocidade": 0,
+            "fisico": 0,
+            "interceptacao": 0,
+            "defesaGk": 0,
+            "dominio": 0
+          }
+        },
+        "1435070343709593720": {
+          "nome": "carro0429",
+          "setor": "C12",
+          "time": "bastard",
+          "timeTipo": "casa",
+          "posicao": "Atacante",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "drible": 0,
+            "passe": 0,
+            "desarme": 0,
+            "defesaGk": 0,
+            "fisico": 0,
+            "velocidade": 0,
+            "interceptacao": 0,
+            "dominio": 0
+          }
+        },
+        "1288909739840901173": {
+          "nome": "oliveir___",
+          "setor": "C18",
+          "time": "pxg",
+          "timeTipo": "fora",
+          "posicao": "Atacante",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "drible": 0,
+            "passe": 0,
+            "desarme": 0,
+            "velocidade": 0,
+            "fisico": 0,
+            "interceptacao": 0,
+            "defesaGk": 0,
+            "dominio": 0
+          }
+        },
+        "1374894615626518729": {
+          "nome": "m4theus_szx.ultrp",
+          "setor": "C19",
+          "time": "pxg",
+          "timeTipo": "fora",
+          "posicao": "Atacante",
+          "marcadoPor": null,
+          "turnosMarcado": 0,
+          "status": {
+            "finalizacao": 0,
+            "drible": 0,
+            "passe": 0,
+            "desarme": 0,
+            "defesaGk": 0,
+            "fisico": 0,
+            "velocidade": 0,
+            "interceptacao": 0,
+            "dominio": 0
+          }
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": null,
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {},
+      "faltas": {},
+      "times": {
+        "bastard": {
+          "jogadores": [
+            "772060684417499156",
+            "1479604053326434334",
+            "1435070343709593720"
+          ],
+          "gols": 0
+        },
+        "pxg": {
+          "jogadores": [
+            "1313323679181967465",
+            "1288909739840901173",
+            "1374894615626518729"
+          ],
+          "gols": 0
+        }
+      }
+    },
+    "partida_1505614091308499155": {
+      "timeCasa": "chelsea",
+      "timeFora": "bastard",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": null,
+      "posseNome": null,
+      "minuto": 0,
+      "ativa": true,
+      "canal": "1505614091308499155",
+      "jogadores": {
+        "772060684417499156": {
+          "nome": "dezinhoz",
+          "setor": 11,
+          "time": "chelsea",
+          "timeTipo": "casa",
+          "posicao": "Atacante"
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": null,
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {},
+      "faltas": {},
+      "times": {
+        "chelsea": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "bastard": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "casa": {
+          "jogadores": [
+            "772060684417499156"
+          ]
+        },
+        "fora": {
+          "jogadores": []
+        }
+      }
+    },
+    "partida_1505614335203086449": {
+      "timeCasa": "history",
+      "timeFora": "astral",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": null,
+      "posseNome": null,
+      "minuto": 0,
+      "ativa": true,
+      "canal": "1505614335203086449",
+      "jogadores": {
+        "1401752009723609109": {
+          "nome": "kant_yugo",
+          "setor": 15,
+          "time": "astral",
+          "timeTipo": "fora",
+          "posicao": "Zagueiro"
+        },
+        "1080279970120732682": {
+          "nome": "86vx",
+          "setor": 9,
+          "time": "astral",
+          "timeTipo": "fora",
+          "posicao": "Ponta"
+        },
+        "1429658248738246768": {
+          "nome": "meridiann_",
+          "setor": 11,
+          "time": "astral",
+          "timeTipo": "fora",
+          "posicao": "Meio-campo"
+        },
+        "410125035085496320": {
+          "nome": "yangb_souza",
+          "setor": 11,
+          "time": "history",
+          "timeTipo": "casa",
+          "posicao": "Atacante"
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": null,
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {},
+      "faltas": {},
+      "times": {
+        "history": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "astral": {
+          "jogadores": [],
+          "gols": 0
+        },
+        "casa": {
+          "jogadores": [
+            "410125035085496320"
+          ]
+        },
+        "fora": {
+          "jogadores": [
+            "1401752009723609109",
+            "1080279970120732682",
+            "1429658248738246768"
+          ]
+        }
+      }
+    },
+    "partida_1505614338340421674": {
+      "timeCasa": "<timeKash(realmadrid)>",
+      "timeFora": "<timekaiser(barcelona)>",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "posse": "1393285776883712021",
+      "posseNome": "tottaboy",
+      "minuto": 1.5,
+      "tempo": "1º Tempo",
+      "ativa": true,
+      "canal": "1505614338340421674",
+      "jogadores": {
+        "1080279970120732682": {
+          "nome": "86vx",
+          "setor": "C7",
+          "time": "<timeKash(realmadrid)>",
+          "timeTipo": "casa",
+          "posicao": "pontas",
+          "posicaoNome": "Ponta"
+        },
+        "1401752009723609109": {
+          "nome": "kant_yugo",
+          "setor": "C11",
+          "time": "<timekaiser(barcelona)>",
+          "timeTipo": "fora",
+          "posicao": "centro_avante",
+          "posicaoNome": "Centro Avante"
+        },
+        "1393285776883712021": {
+          "nome": "tottaboy",
+          "setor": "C2",
+          "time": "<timeKash(realmadrid)>",
+          "timeTipo": "casa",
+          "posicao": "goleiro",
+          "posicaoNome": "Goleiro"
+        },
+        "1429658248738246768": {
+          "nome": "meridiann_",
+          "setor": "C11",
+          "time": "<timeKash(realmadrid)>",
+          "timeTipo": "casa",
+          "posicao": "meio_ofensivo",
+          "posicaoNome": "Meio Ofensivo"
+        },
+        "1366813437606232135": {
+          "nome": "shipsahur",
+          "setor": "C11",
+          "time": "<timekaiser(barcelona)>",
+          "timeTipo": "fora",
+          "posicao": "centro_avante",
+          "posicaoNome": "Centro Avante"
+        }
+      },
+      "estatisticas": {},
+      "ultimoPasse": null,
+      "aguardandoDominio": false,
+      "bolaSetor": "C13",
+      "aguardandoChute": false,
+      "chutePendente": null,
+      "aguardandoPontapeAposGol": false,
+      "ultimoGol": null,
+      "prioridades": {},
+      "faltas": {},
+      "times": {
+        "<timeKash(realmadrid)>": {
+          "jogadores": [
+            "1080279970120732682",
+            "1393285776883712021",
+            "1429658248738246768"
+          ],
+          "gols": 0
+        },
+        "<timekaiser(barcelona)>": {
+          "jogadores": [
+            "1401752009723609109",
+            "1366813437606232135"
+          ],
+          "gols": 0
+        }
+      },
+      "placar": {
+        "casa": 0,
+        "fora": 0
+      }
+    }
+  }
+}
