@@ -394,10 +394,7 @@
         "fisico": 0,
         "interceptacao": 0,
         "defesaGk": 0,
-        "dominio": 0,
-        "bloqueio": 0,
-        "marcacao": 0,
-        "antecipacao": 0
+        "dominio": 0
       },
       "estatisticas": {
         "gols": 0,
@@ -407,10 +404,13 @@
         "desarmes": 0,
         "interceptacoes": 0,
         "defesas": 0,
-        "bloqueios": 0,
         "partidas": 0,
-        "vitorias": 0
-      }
+        "vitorias": 0,
+        "pdr": 0
+      },
+      "pontosTreino": 0,
+      "rolls": {},
+      "rollsDisponiveis": {}
     },
     "1170420771206729828": {
       "nome": "batataoeosfnaf_57457",
@@ -548,36 +548,47 @@
       },
       "habilidades": {},
       "imagem": null
+    },
+    "1414663229690482690": {
+      "nome": "zigggz_71964",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {
+        "arma": 4
+      }
     }
   },
   "partidas": {
     "partida_1505614096320565369": {
-      "timeCasa": "<timeCasa>",
-      "timeFora": "<timeFora>",
+      "timeCasa": "bastard",
+      "timeFora": "pxg",
       "golsCasa": 0,
       "golsFora": 0,
-      "posse": "1366813437606232135",
-      "posseNome": "shipsahur",
-      "minuto": 2.5,
+      "posse": "772060684417499156",
+      "posseNome": "dezinhoz",
+      "minuto": 1,
       "tempo": "1º Tempo",
       "ativa": true,
       "canal": "1505614096320565369",
       "jogadores": {
-        "1366813437606232135": {
-          "nome": "shipsahur",
-          "setor": "C8",
-          "time": "<timeCasa>",
-          "timeTipo": "casa",
-          "posicao": "centro_avante",
-          "posicaoNome": "Centro Avante"
-        },
-        "892080349021081702": {
-          "nome": "shinowakasaki",
-          "setor": "C8",
-          "time": "<timeFora>",
+        "772060684417499156": {
+          "nome": "dezinhoz",
+          "setor": "C11",
+          "time": "pxg",
           "timeTipo": "fora",
           "posicao": "meio_ofensivo",
-          "posicaoNome": "Meio Ofensivo"
+          "posicaoNome": "Meio Ofensivo",
+          "zona": "meio_campo"
         }
       },
       "estatisticas": {},
@@ -588,23 +599,16 @@
       "chutePendente": null,
       "aguardandoPontapeAposGol": false,
       "ultimoGol": null,
-      "prioridades": {
-        "1366813437606232135": {
-          "contra": "892080349021081702",
-          "turnos": 1
-        }
-      },
+      "prioridades": {},
       "faltas": {},
       "times": {
-        "<timeCasa>": {
-          "jogadores": [
-            "1366813437606232135"
-          ],
+        "bastard": {
+          "jogadores": [],
           "gols": 0
         },
-        "<timeFora>": {
+        "pxg": {
           "jogadores": [
-            "892080349021081702"
+            "772060684417499156"
           ],
           "gols": 0
         }
