@@ -1,0 +1,50 @@
+2026-06-11T14:51:54.697605832Z ✅ Comando carregado: addrolls (Admin/addrolls.js)
+2026-06-11T14:51:54.702578571Z ✅ Comando carregado: backupgithub (Admin/github_backup.js)
+2026-06-11T14:51:54.703229267Z ✅ Comando carregado: resetar (Admin/resetar.js)
+2026-06-11T14:51:54.703878250Z ✅ Comando carregado: setestatistica (Admin/setestatistica.js)
+2026-06-11T14:51:54.705429651Z ✅ Comando carregado: setperfil (Admin/setperfil.js)
+2026-06-11T14:51:54.706076251Z ✅ Comando carregado: setstatus (Admin/setstatus.js)
+2026-06-11T14:51:54.706771133Z ✅ Comando carregado: armas (Info/armas.js)
+2026-06-11T14:51:54.707291627Z ✅ Comando carregado: cargos (Info/cargos.js)
+2026-06-11T14:51:54.708513952Z ✅ Comando carregado: estatisticas (Info/estatisticas.js)
+2026-06-11T14:51:54.709098291Z ✅ Comando carregado: help (Info/help.js)
+2026-06-11T14:51:54.709577304Z ✅ Comando carregado: helpadmin (Info/helpadmin.js)
+2026-06-11T14:51:54.710367761Z ✅ Comando carregado: overall (Info/overall.js)
+2026-06-11T14:51:54.710899460Z ✅ Comando carregado: perfil (Info/perfil.js)
+2026-06-11T14:51:54.711498538Z ✅ Comando carregado: posicao (Info/posicao.js)
+2026-06-11T14:51:54.711970906Z ✅ Comando carregado: setimagem (Info/setimagem.js)
+2026-06-11T14:51:54.713413192Z ✅ Comando carregado: status (Info/status.js)
+2026-06-11T14:51:54.713940551Z ✅ Comando carregado: treinar (Info/treinar.js)
+2026-06-11T14:51:54.714763923Z ✅ Comando carregado: 1v1 (Partida/1v1.js)
+2026-06-11T14:51:54.715702056Z ✅ Comando carregado: bolaparada (Partida/Bolaparada.js)
+2026-06-11T14:51:54.716110305Z ✅ Comando carregado: campo (Partida/campo.js)
+2026-06-11T14:51:54.716938979Z ✅ Comando carregado: chute (Partida/chute.js)
+2026-06-11T14:51:54.717799161Z ✅ Comando carregado: cruzamento (Partida/cruzamento.js)
+2026-06-11T14:51:54.718659407Z ✅ Comando carregado: chute (Partida/defender.js)
+2026-06-11T14:51:54.719322363Z ✅ Comando carregado: dominar (Partida/dominar.js)
+2026-06-11T14:51:54.720202826Z ✅ Comando carregado: driblar (Partida/driblar.js)
+2026-06-11T14:51:54.721756429Z ✅ Comando carregado: entrar (Partida/entrar.js)
+2026-06-11T14:51:54.722185544Z ✅ Comando carregado: finalizar (Partida/finalizar.js)
+2026-06-11T14:51:54.723014817Z ✅ Comando carregado: interceptar (Partida/interceptar.js)
+2026-06-11T14:51:54.723736348Z ✅ Comando carregado: marcar (Partida/marcar.js)
+2026-06-11T14:51:54.724161425Z ✅ Comando carregado: partida (Partida/partida.js)
+2026-06-11T14:51:54.725029425Z ✅ Comando carregado: passe (Partida/passe.js)
+2026-06-11T14:51:54.725448421Z ✅ Comando carregado: placar (Partida/placar.js)
+2026-06-11T14:51:54.725960096Z ✅ Comando carregado: pontape (Partida/pontape.js)
+2026-06-11T14:51:54.726377667Z ✅ Comando carregado: ranking (Partida/ranking.js)
+2026-06-11T14:51:54.727184815Z ✅ Comando carregado: desarmar (Partida/roubarbola.js)
+2026-06-11T14:51:54.727625775Z ✅ Comando carregado: statusjogo (Partida/statusjogo.js)
+2026-06-11T14:51:54.729801516Z ✅ Comando carregado: testar (Partida/testar.js)
+2026-06-11T14:51:54.730609453Z ✅ Comando carregado: velocidade (Partida/velocidade.js)
+2026-06-11T14:51:54.731654983Z ⚠️ Não foi possível encontrar habilidades.js automaticamente. Usando fallback de segurança.
+2026-06-11T14:51:54.731694165Z ✅ Comando carregado: roll (Rolls/rollestilo.js)
+2026-06-11T14:51:54.731733591Z 📦 Total de comandos carregados: 38
+2026-06-11T14:51:54.733403276Z ✅ Evento carregado: guildMemberRemove
+2026-06-11T14:51:54.733923657Z ✅ Evento carregado: messageCreate
+2026-06-11T14:51:54.734350137Z ✅ Evento carregado: ready
+2026-06-11T14:51:56.139658414Z ✅ Bot online! Logado como ✦﹒Rin Itoshi﹒❄#7066
+2026-06-11T14:51:56.140009278Z (node:11) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
+2026-06-11T14:51:56.140021828Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-11T15:09:57.716735927Z [🧹 LIMPEZA] Processando saída de justnika....
+2026-06-11T15:09:57.717229918Z [🧹 LIMPEZA] ℹ️ justnika. não tinha dados no players.json
+2026-06-11T15:09:57.718366529Z [🧹 LIMPEZA] 🎉 Limpeza de justnika. concluída com sucesso!
