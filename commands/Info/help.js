@@ -14,12 +14,12 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙⚽﹚***__Sistema de Futebol Estratégico__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎲 ⦘**  **__Dados__** —  \`D20 para ações | D40 para chutes\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📊 ⦘**  **__Status__** —  \`Treine para aumentar seus atributos!\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚔️ ⦘**  **__Armas__** —  \`Habilidades especiais com bônus\`\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏆 ⦘**  **__Como Jogar__**\n` +
+                    `> ** ⦗ 🎲 ⦘**  **__Dados__** —  \`D20 para ações | D40 para chutes\`\n` +
+                    `> ** ⦗ 📊 ⦘**  **__Status__** —  \`Treine para aumentar seus atributos!\`\n` +
+                    `> ** ⦗ ⚔️ ⦘**  **__Armas__** —  \`Habilidades especiais com bônus\`\n\n` +
+                    `> ** ⦗ 🏆 ⦘**  **__Como Jogar__**\n` +
                     `> │ 1. Use \`c!entrar casa/fora\` para entrar na partida\n` +
-                    `> │ 2. Use \`c!movimentar <setor>\` para se mover\n` +
+                    `> │ 2. Digite suas ações se movimentado (ex: nixiZ foi C2)\n` +
                     `> │ 3. Use \`c!passe\`, \`c!chute\` ou \`c!driblar\` para agir\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`
                 )
@@ -34,13 +34,13 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙👤﹚***__Comandos de Perfil__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📜 ⦘**  **__c!perfil__** —  \`Mostra seu perfil completo (cargos + rolls)\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📊 ⦘**  **__c!status__** —  \`Mostra atributos com bônus\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏆 ⦘**  **__c!overall__** —  \`Mostra seu overall FIFA\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📈 ⦘**  **__c!estatisticas__** —  \`Gols, assistências, PDR e ranking\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚔️ ⦘**  **__c!armas__** —  \`Mostra suas armas equipadas\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📋 ⦘**  **__c!cargos__** —  \`Mostra o que cada cargo te dá\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🖼️ ⦘**  **__c!setimagem__** —  \`Define imagem do perfil\`\n\n` +
+                    `> **⦗  📜 ⦘**  **__c!perfil__** —  \`Mostra seu perfil completo (cargos + rolls)\`\n` +
+                    `> **⦗  📊 ⦘**  **__c!status__** —  \`Mostra atributos com bônus\`\n` +
+                    `> **⦗  🏆 ⦘**  **__c!overall__** —  \`Mostra seu overall FIFA\`\n` +
+                    `> **⦗  📈 ⦘**  **__c!estatisticas__** —  \`Gols, assistências, PDR e ranking\`\n` +
+                    `> **⦗  ⚔️ ⦘**  **__c!armas__** —  \`Mostra suas armas equipadas\`\n` +
+                    `> **⦗  📋 ⦘**  **__c!cargos__** —  \`Mostra o que cada cargo te dá\`\n` +
+                    `> **⦗  🖼️ ⦘**  **__c!setimagem__** —  \`Define imagem do perfil\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
                     `> ˚ ˳ ﹙📊﹚***__Status Disponíveis__***\n` +
                     `> 🦵 Finalização • ✨ Drible • ☄️ Passe\n` +
@@ -58,15 +58,15 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙🎲﹚***__Comandos de Roll__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎲 ⦘**  **__c!roll__** —  \`Menu de rolls disponíveis\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚔️ ⦘**  **__c!roll arma__** —  \`Revela sua arma\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎭 ⦘**  **__c!roll estilo__** —  \`Revela seu estilo de jogo\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⭐ ⦘**  **__c!roll dom__** —  \`Revela seu dom/talento\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 👹 ⦘**  **__c!roll monstro__** —  \`Revela se tem monstro\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 👑 ⦘**  **__c!roll dominancia__** —  \`Revela sua dominância\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 👨‍👩‍👧 ⦘**  **__c!roll familia__** —  \`Revela sua família\`\n\n` +
+                    `> **⦗  🎲 ⦘**  **__c!roll__** —  \`Menu de rolls disponíveis\`\n` +
+                    `> **⦗  🗡️ ⦘**  **__c!roll arma__** —  \`Revela sua arma\`\n` +
+                    `> **⦗  🎭 ⦘**  **__c!roll estilo__** —  \`Revela seu estilo de jogo\`\n` +
+                    `> **⦗  ⭐ ⦘**  **__c!roll dom__** —  \`Revela seu dom/talento\`\n` +
+                    `> **⦗  👹 ⦘**  **__c!roll monstro__** —  \`Revela se tem monstro\`\n` +
+                    `> **⦗  👑 ⦘**  **__c!roll dominancia__** —  \`Revela sua dominância\`\n` +
+                    `> **⦗ 👨‍👩‍👧 ⦘**  **__c!roll familia__** —  \`Revela sua família\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📛 ⦘**  **__Geral__** —  __***Rolls revelam o que seus cargos já te dão!***__\n\n` +
+                    `> **⦗ 📛 ⦘**  **__Geral__** —  __***Rolls revelam o que seus cargos já te dão!***__\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`
                 )
                 .setFooter({ text: '📖 Página 3/7 • Use os botões para navegar' }),
@@ -79,12 +79,12 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙🏋️﹚***__Comandos de Treino__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏋️ ⦘**  **__c!treinar__** —  \`Faz o treino diário (3-7 pontos)\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📊 ⦘**  **__c!treinar pontos__** —  \`Vê quantos pontos tem\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📈 ⦘**  **__c!treinar distribuir__** —  \`Lista atributos\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📈 ⦘**  **__c!treinar distribuir <attr> <qtd>__** —  \`Distribui pontos\`\n\n` +
+                    `> **⦗  🏋️ ⦘**  **__c!treinar__** —  \`Faz o treino diário (3-7 pontos)\`\n` +
+                    `> **⦗  📊 ⦘**  **__c!treinar pontos__** —  \`Vê quantos pontos tem\`\n` +
+                    `> **⦗  📈 ⦘**  **__c!treinar distribuir__** —  \`Lista atributos\`\n` +
+                    `> **⦗  📈 ⦘**  **__c!treinar distribuir <attr> <qtd>__** —  \`Distribui pontos\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📛 ⦘**  **__Exemplo__** —  \`c!treinar distribuir finalizacao 5\`\n\n` +
+                    `> **⦗  📛 ⦘**  **__Exemplo__** —  \`c!treinar distribuir finalizacao 5\`\n\n` +
                     `> ˚ ˳ ﹙⏰﹚***__Regras__***\n` +
                     `> │ • Treino disponível a cada 24 horas\n` +
                     `> │ • Ganha de 3 a 7 pontos por treino\n` +
@@ -101,17 +101,17 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙⚽﹚***__Ações Ofensivas__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚽ ⦘**  **__c!chute__** —  \`Finaliza ao gol\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ☄️ ⦘**  **__c!passe @user__** —  \`Passa a bola\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎯 ⦘**  **__c!cruzamento @user__** —  \`Cruza para área\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ✨ ⦘**  **__c!driblar @user__** —  \`Tenta drible\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚽ ⦘**  **__c!dominar__** —  \`Domina a bola\`\n\n` +
+                    `> **⦗  ⚽ ⦘**  **__c!chute__** —  \`Finaliza ao gol\`\n` +
+                    `> **⦗  ☄️ ⦘**  **__c!passe @user__** —  \`Passa a bola\`\n` +
+                    `> **⦗  🎯 ⦘**  **__c!cruzamento @user__** —  \`Cruza para área\`\n` +
+                    `> **⦗  ✨ ⦘**  **__c!driblar @user__** —  \`Tenta drible\`\n` +
+                    `> **⦗  ⚽ ⦘**  **__c!dominar__** —  \`Domina a bola\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
                     `> ˚ ˳ ﹙🛡️﹚***__Ações Defensivas__***\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🧤 ⦘**  **__c!defender__** —  \`Goleiro defende\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🛡️ ⦘**  **__c!desarmar @user__** —  \`Rouba a bola\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🔒 ⦘**  **__c!marcar @user__** —  \`Marca adversário\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎯 ⦘**  **__c!interceptar__** —  \`Intercepta passe\`\n\n` +
+                    `> **⦗  🧤 ⦘**  **__c!defender__** —  \`Goleiro defende\`\n` +
+                    `> **⦗  🛡️ ⦘**  **__c!desarmar @user__** —  \`Rouba a bola\`\n` +
+                    `> **⦗  🔒 ⦘**  **__c!marcar @user__** —  \`Marca adversário\`\n` +
+                    `> **⦗  🎯 ⦘**  **__c!interceptar__** —  \`Intercepta passe\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`
                 )
                 .setFooter({ text: '📖 Página 5/7 • Use os botões para navegar' }),
@@ -124,17 +124,17 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙🏟️﹚***__Comandos de Partida__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏟️ ⦘**  **__c!campo__** —  \`Mostra o campo e posições\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏃 ⦘**  **__c!movimentar <setor>__** —  \`Move seu jogador\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚡ ⦘**  **__c!velocidade @user__** —  \`Disputa de velocidade\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚔️ ⦘**  **__c!1v1 @user__** —  \`Duelo 1v1\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 📊 ⦘**  **__c!placar__** —  \`Mostra o placar\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚽ ⦘**  **__c!pontape__** —  \`Inicia/recomeça partida\`\n` +
+                    `> **⦗  🏟️ ⦘**  **__c!campo__** —  \`Mostra o campo e posições\`\n` +
+                    `> **⦗  🏃 ⦘**  **__c!movimentar <setor>__** —  \`Move seu jogador\`\n` +
+                    `> **⦗  ⚡ ⦘**  **__c!velocidade @user__** —  \`Disputa de velocidade\`\n` +
+                    `> **⦗  ⚔️ ⦘**  **__c!1v1 @user__** —  \`Duelo 1v1\`\n` +
+                    `> **⦗  📊 ⦘**  **__c!placar__** —  \`Mostra o placar\`\n` +
+                    `> **⦗  ⚽ ⦘**  **__c!pontape__** —  \`Inicia/recomeça partida\`\n` +
                     `> **𓂂𝅙ֺ𝅙ִ ⦗ 📋 ⦘**  **__c!statusjogo__** —  \`Status da partida\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
                     `> ˚ ˳ ﹙🎭﹚***__Bola Parada__***\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎭 ⦘**  **__c!bolaparada cavar @user__** —  \`Cavar falta\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🥅 ⦘**  **__c!bolaparada cobrar__** —  \`Cobrar falta/pênalti\`\n\n` +
+                    `> **⦗  🎭 ⦘**  **__c!bolaparada cavar @user__** —  \`Cavar falta\`\n` +
+                    `> **⦗  🥅 ⦘**  **__c!bolaparada cobrar__** —  \`Cobrar falta/pênalti\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`
                 )
                 .setFooter({ text: '📖 Página 6/7 • Use os botões para navegar' }),
@@ -147,17 +147,17 @@ module.exports = {
                 .setDescription(
                     `˚ ˳ ﹙🧪﹚***__Modo Teste__***\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚡ ⦘**  **__c!testar ativar__** —  \`Ativa modo de teste\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎯 ⦘**  **__c!testar chute__** —  \`Testa finalizações\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🧤 ⦘**  **__c!testar defesa__** —  \`Testa defesas\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ✨ ⦘**  **__c!testar drible__** —  \`Testa dribles\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ☄️ ⦘**  **__c!testar passe__** —  \`Testa passes\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚙️ ⦘**  **__c!testar config__** —  \`Configura atributos\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ ✨ ⦘**  **__c!testar hab add <nome>__** —  \`Adiciona habilidade\`\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🛑 ⦘**  **__c!testar desativar__** —  \`Desativa modo teste\`\n\n` +
+                    `> **⦗  ⚡ ⦘**  **__c!testar ativar__** —  \`Ativa modo de teste\`\n` +
+                    `> **⦗  🎯 ⦘**  **__c!testar chute__** —  \`Testa finalizações\`\n` +
+                    `> **⦗  🧤 ⦘**  **__c!testar defesa__** —  \`Testa defesas\`\n` +
+                    `> **⦗  ✨ ⦘**  **__c!testar drible__** —  \`Testa dribles\`\n` +
+                    `> **⦗  ☄️ ⦘**  **__c!testar passe__** —  \`Testa passes\`\n` +
+                    `> **⦗  ⚙️ ⦘**  **__c!testar config__** —  \`Configura atributos\`\n` +
+                    `> **⦗  ✨ ⦘**  **__c!testar hab add <nome>__** —  \`Adiciona habilidade\`\n` +
+                    `> **⦗  🛑 ⦘**  **__c!testar desativar__** —  \`Desativa modo teste\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
                     `> ˚ ˳ ﹙🏆﹚***__Ranking__***\n\n` +
-                    `> **𓂂𝅙ֺ𝅙ִ ⦗ 🏆 ⦘**  **__c!ranking__** —  \`Ranking de jogadores\`\n\n` +
+                    `> **⦗  🏆 ⦘**  **__c!ranking__** —  \`Ranking de jogadores\`\n\n` +
                     `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`
                 )
                 .setFooter({ text: '📖 Página 7/7 • Use os botões para navegar' })
