@@ -4,64 +4,10 @@ const path = require('path');
 
 const blueLockPath = path.join(__dirname, '../../blueLock.json');
 
-const setoresCampo = {
-    "Goleiro": "🧤 Área de Goleiro",
-    "Defesa": "🛡️ Linha Defensiva",
-    "Meio-Campo": "⚡ Meio de Campo",
-    "Ataque": "⚽ Ataque"
-};
-
-function mostrarPosicoesCampo(partida, bolaSetor = null, posseNome = null) {
-    if (!partida.jogadores || Object.keys(partida.jogadores).length === 0) {
-        return "📍 *Nenhum jogador no campo*";
-    }
-    
-    const setores = {
-        "🧤 Goleiro": [],
-        "🛡️ Defesa": [],
-        "⚡ Meio-Campo": [],
-        "⚽ Ataque": []
-    };
-    
-    for (const [id, jogador] of Object.entries(partida.jogadores)) {
-        const setor = jogador.setor || "Meio-Campo";
-        const nomeJogador = jogador.nome || "Jogador";
-        const marcador = partida.posse === id ? " 🎯" : "";
-        
-        if (setor === "Goleiro") setores["🧤 Goleiro"].push(`${nomeJogador}${marcador}`);
-        else if (setor === "Defesa") setores["🛡️ Defesa"].push(`${nomeJogador}${marcador}`);
-        else if (setor === "Ataque") setores["⚽ Ataque"].push(`${nomeJogador}${marcador}`);
-        else setores["⚡ Meio-Campo"].push(`${nomeJogador}${marcador}`);
-    }
-    
-    let texto = `📍 **POSIÇÕES NO CAMPO**\n\`\`\`\n`;
-    for (const [setor, jogadores] of Object.entries(setores)) {
-        if (jogadores.length > 0) {
-            texto += `${setor}: ${jogadores.join(", ")}\n`;
-        } else {
-            texto += `${setor}: (vazio)\n`;
-        }
-    }
-    
-    if (bolaSetor) {
-        texto += `\n🎯 Bola está em: ${bolaSetor}\n`;
-    }
-    if (posseNome) {
-        texto += `⚽ Posse: ${posseNome}\n`;
-    }
-    texto += `\`\`\``;
-    
-    return texto;
-}
-
-function mostrarPlacar(partida) {
-    return `📊 **PLACAR**\n🏠 ${partida.timeCasa || 'Casa'}: ${partida.golsCasa || 0} | 🚀 ${partida.timeFora || 'Fora'}: ${partida.golsFora || 0}`;
-}
-
 module.exports = {
     name: 'campo',
-    description: '📊 Mostra o estado atual do campo',
-    aliases: ['estado', 'partida', 'status'],
+    description: '🏟️ Mostra o campo de futebol',
+    aliases: ['field', 'estadio'],
     async execute(message, args) {
         let dados = {};
         if (fs.existsSync(blueLockPath)) dados = JSON.parse(fs.readFileSync(blueLockPath, 'utf8'));
@@ -70,26 +16,27 @@ module.exports = {
         const partidaId = `partida_${message.channel.id}`;
         const partida = dados.partidas[partidaId];
 
+        // Se não houver partida, mostra só a imagem do campo
         if (!partida || !partida.ativa) {
-            return message.reply('❌ Não há partida ativa neste canal!');
+            const embed = new EmbedBuilder()
+                .setColor('#2E86C1')
+                .setTitle('🏟️ CAMPO DE FUTEBOL')
+                .setDescription('⚽ Use `c!partida iniciar` para começar uma partida!')
+                .setImage('https://cdn.discordapp.com/attachments/1471676738672267446/1510506479554134176/Screenshot_2025-06-28-19-08-25-919_com.discord-edit.jpg')
+                .setFooter({ text: 'Blue Lock • Sistema de Futebol' });
+            
+            return message.reply({ embeds: [embed] });
         }
 
+        // Se houver partida, mostra com informações básicas
         const minuto = Math.floor(partida.minuto || 0);
         const tempo = partida.tempo || "1º Tempo";
         
-        let posseNome = "Ninguém";
-        if (partida.posse && partida.jogadores[partida.posse]) {
-            posseNome = partida.jogadores[partida.posse].nome || "Jogador";
-        }
-        
-        const bolaSetor = partida.bolaSetor || "Meio-Campo";
-        const posicoesTexto = mostrarPosicoesCampo(partida, bolaSetor, posseNome);
-        const placarTexto = mostrarPlacar(partida);
-        
         const embed = new EmbedBuilder()
             .setColor('#2E86C1')
-            .setTitle(`⚽ CAMPO - ${minuto}' ${tempo}`)
-            .setDescription(`${placarTexto}\n\n${posicoesTexto}`)
+            .setTitle(`🏟️ ${partida.timeCasa || 'Casa'} vs ${partida.timeFora || 'Fora'}`)
+            .setDescription(`⏰ ${minuto}' ${tempo}\n\n🏠 ${partida.golsCasa || 0} - ${partida.golsFora || 0} ✈️`)
+            .setImage('https://cdn.discordapp.com/attachments/1471676738672267446/1510506479554134176/Screenshot_2025-06-28-19-08-25-919_com.discord-edit.jpg')
             .setFooter({ text: `👥 ${Object.keys(partida.jogadores || {}).length} jogadores em campo` })
             .setTimestamp();
         
