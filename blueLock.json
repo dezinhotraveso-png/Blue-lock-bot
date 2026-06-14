@@ -2,7 +2,7 @@
   "jogadores": {
     "886349533016104960": {
       "id": "886349533016104960",
-      "nome": "Novato",
+      "nome": "lsfus",
       "posicao": "meia",
       "ego": null,
       "perna": "🦵 Destro",
@@ -61,14 +61,19 @@
         "interceptacoes": 0,
         "defesas": 0,
         "partidas": 0,
-        "vitorias": 0
+        "vitorias": 0,
+        "pdr": 0
       },
       "egosDesbloqueados": [],
       "egoAtivo": null,
       "imagem": "https://i.pinimg.com/736x/cc/24/08/cc2408f04dcac171ff0bfec8c34fb48e.jpg",
       "rollsDisponiveis": {},
       "habilidades": {},
-      "pontosTreino": 0
+      "pontosTreino": 0,
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      }
     },
     "1479604053326434334": {
       "id": "1479604053326434334",
@@ -124,7 +129,7 @@
     "772060684417499156": {
       "nome": "dezinhoz",
       "status": {
-        "finalizacao": 0,
+        "finalizacao": 5,
         "drible": 0,
         "passe": 0,
         "desarme": 0,
@@ -138,7 +143,7 @@
       "rollsDisponiveis": {},
       "pontosTreino": 0,
       "ultimoTreino": "Sat May 30 2026",
-      "ultimoTreinoTimestamp": 1780153025954,
+      "ultimoTreinoTimestamp": 1781387358857,
       "estatisticas": {
         "gols": 0,
         "assistencias": 0,
@@ -149,10 +154,81 @@
         "defesas": 0,
         "partidas": 0,
         "vitorias": 0,
-        "pdr": 0
+        "pdr": 0,
+        "finalizacoes": 1
       },
-      "posicao": "MEIA",
-      "habilidades": {}
+      "posicao": "ATACANTE",
+      "habilidades": {
+        "kaiserBike": {
+          "nome": "Kaiser Bike",
+          "usosRestantes": 0
+        }
+      },
+      "talento": {
+        "tipo": "gênio",
+        "atributoPrincipal": "finalizacao",
+        "fluxoAtivo": false,
+        "sobPressao": false,
+        "ativoUsadoNaPartida": false
+      },
+      "pontosLivres": 0,
+      "_statusTotal": {
+        "finalizacao": 22,
+        "drible": 7,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 8,
+        "fisico": 4,
+        "interceptacao": 3,
+        "defesaGk": 0,
+        "dominio": 6
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "772060684417499156",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1779037690409,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "Dezin",
+        "roles": [
+          "1505613300954693912",
+          "1509602921715601408",
+          "1509603694226706433",
+          "1505613760281186434",
+          "1509598722185494728",
+          "1509590391765078089",
+          "1509624640136286218",
+          "1509626607478767626",
+          "1509611095860707600",
+          "1509590179445346577",
+          "1509623847043731600",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509605001801236510",
+          "1508274120528232542",
+          "1509598037180154078",
+          "1509596964512338020",
+          "1509535186235293868",
+          "1509538428335951932",
+          "1509624151780884530",
+          "1509589184292327607",
+          "1509535244032938044"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/772060684417499156/f15d410406a28282a37c23e9a336b07c.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      }
     },
     "1288909739840901173": {
       "nome": "oliveir___",
@@ -169,23 +245,6 @@
       },
       "rolls": {},
       "rollsDisponiveis": {},
-      "pontosTreino": 0
-    },
-    "1435070343709593720": {
-      "nome": "carro0429",
-      "status": {
-        "finalizacao": 0,
-        "drible": 0,
-        "passe": 0,
-        "desarme": 0,
-        "velocidade": 0,
-        "fisico": 0,
-        "interceptacao": 0,
-        "defesaGk": 0,
-        "dominio": 0
-      },
-      "rolls": {},
-      "rollsDisponiveis": {},
       "pontosTreino": 0,
       "estatisticas": {
         "gols": 0,
@@ -195,10 +254,11 @@
         "desarmes": 0,
         "interceptacoes": 0,
         "defesas": 0,
+        "bloqueios": 0,
         "partidas": 0,
-        "vitorias": 0,
-        "pdr": 0
-      }
+        "vitorias": 0
+      },
+      "habilidades": {}
     },
     "1401752009723609109": {
       "nome": "kant_yugo",
@@ -288,7 +348,11 @@
         "vitorias": 0,
         "pdr": 0
       },
-      "habilidades": {}
+      "habilidades": {},
+      "talento": {
+        "tipo": "aprendiz",
+        "atributoPrincipal": "finalizacao"
+      }
     },
     "410125035085496320": {
       "nome": "yangb_souza",
@@ -317,42 +381,17 @@
         "partidas": 0,
         "vitorias": 0,
         "pdr": 0
-      }
-    },
-    "920475205879619614": {
-      "nome": "daarkmiel",
-      "status": {
-        "finalizacao": 0,
-        "drible": 0,
-        "passe": 0,
-        "desarme": 0,
-        "velocidade": 0,
-        "fisico": 0,
-        "interceptacao": 0,
-        "defesaGk": 0,
-        "dominio": 0
-      },
-      "rolls": {},
-      "rollsDisponiveis": {},
-      "estatisticas": {
-        "gols": 0,
-        "assistencias": 0,
-        "passes": 0,
-        "dribles": 0,
-        "desarmes": 0,
-        "interceptacoes": 0,
-        "defesas": 0,
-        "bloqueios": 0,
-        "partidas": 0,
-        "vitorias": 0
       },
       "habilidades": {},
-      "pontosTreino": 0
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      }
     },
     "892080349021081702": {
       "id": "892080349021081702",
       "nome": "shinowakasaki",
-      "posicao": "ZAGUEIRO",
+      "posicao": "MEIA",
       "status": {
         "finalizacao": 0,
         "drible": 0,
@@ -374,11 +413,68 @@
         "defesas": 0,
         "partidas": 0,
         "vitorias": 0,
-        "pdr": 0
+        "pdr": 0,
+        "golsSofridos": 1
       },
       "pontosTreino": 0,
       "rolls": {},
-      "rollsDisponiveis": {}
+      "rollsDisponiveis": {},
+      "habilidades": {
+        "coldPass": {
+          "nome": "Cold Pass",
+          "usosRestantes": 1
+        }
+      },
+      "_statusTotal": {
+        "finalizacao": 0,
+        "drible": 2,
+        "passe": 13,
+        "desarme": 0,
+        "velocidade": 3,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 6
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "892080349021081702",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1780782275221,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "Silver",
+        "roles": [
+          "1505613300954693912",
+          "1509603694226706433",
+          "1509604859740160260",
+          "1509624640136286218",
+          "1505613765754753165",
+          "1509598841228234832",
+          "1509590179445346577",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509623847043731600",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509598037180154078",
+          "1508274120528232542",
+          "1509535186235293868",
+          "1505613762231537776",
+          "1509625886595350648",
+          "1509535244032938044"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/892080349021081702/b164f975ace5abfe578e795cb3d0dbe7.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      }
     },
     "1170420771206729828": {
       "nome": "batataoeosfnaf_57457",
@@ -422,18 +518,87 @@
         "defesas": 0,
         "bloqueios": 0,
         "partidas": 0,
-        "vitorias": 0
+        "vitorias": 0,
+        "golsSofridos": 2
       },
-      "habilidades": {},
+      "habilidades": {
+        "wildSense": {
+          "nome": "Wild Sense",
+          "usosRestantes": 0
+        }
+      },
       "imagem": null,
-      "pontosTreino": 0,
+      "pontosTreino": 3,
       "rolls": {},
-      "rollsDisponiveis": {}
+      "rollsDisponiveis": {},
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "ultimoTreinoTimestamp": 1781385710445,
+      "_statusTotal": {
+        "finalizacao": 15,
+        "drible": 4,
+        "passe": 8,
+        "desarme": 7,
+        "velocidade": 8,
+        "fisico": 4,
+        "interceptacao": 9,
+        "defesaGk": 22,
+        "dominio": 7
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "1393285776883712021",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1779972502591,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "Totta",
+        "roles": [
+          "1505613300954693912",
+          "1509590970340212736",
+          "1509603694226706433",
+          "1509603818269315072",
+          "1512852057319669760",
+          "1509624640136286218",
+          "1515434424668389516",
+          "1509623847043731600",
+          "1509590179445346577",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509938795309564115",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509600407851241694",
+          "1509598037180154078",
+          "1515453552401846432",
+          "1508274120528232542",
+          "1514924512301420645",
+          "1509598352176840744",
+          "1509535186235293868",
+          "1509589868664062062",
+          "1515463944976732270",
+          "1509597251817836594",
+          "1509535244032938044"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/1393285776883712021/5fb8a10b9ab871314c68f8076cd207c3.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      }
     },
     "1366813437606232135": {
       "id": "1366813437606232135",
       "nome": "shipsahur",
-      "posicao": "Meio Ofensivo",
+      "posicao": "GOLEIRO",
       "status": {
         "finalizacao": 0,
         "drible": 0,
@@ -466,7 +631,7 @@
     "1475323630299648162": {
       "id": "1475323630299648162",
       "nome": "kiu04343",
-      "posicao": "Meio Ofensivo",
+      "posicao": "ATACANTE",
       "status": {
         "finalizacao": 0,
         "drible": 0,
@@ -488,18 +653,86 @@
         "defesas": 0,
         "bloqueios": 0,
         "partidas": 0,
-        "vitorias": 0
+        "vitorias": 0,
+        "finalizacoes": 5,
+        "golsSofridos": 1
       },
-      "habilidades": {},
+      "habilidades": {
+        "powerShot": {
+          "nome": "Power Shot",
+          "usosRestantes": 0
+        }
+      },
       "imagem": null,
       "pontosTreino": 0,
       "rolls": {},
-      "rollsDisponiveis": {}
+      "rollsDisponiveis": {},
+      "_statusTotal": {
+        "finalizacao": 25,
+        "drible": 7,
+        "passe": 5,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 6,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 9
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "1475323630299648162",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1779419334866,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "Kiu",
+        "roles": [
+          "1505613300954693912",
+          "1509939338673258496",
+          "1509603694226706433",
+          "1512852057319669760",
+          "1509539549607366847",
+          "1509602242720829641",
+          "1509624640136286218",
+          "1509541491230642379",
+          "1509623847043731600",
+          "1509590179445346577",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509591155174801558",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509605001801236510",
+          "1509598535438434335",
+          "1509598037180154078",
+          "1508274120528232542",
+          "1509535186235293868",
+          "1509597251817836594",
+          "1509624151780884530",
+          "1509535244032938044",
+          "1509589664955371711"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/1475323630299648162/1d3c9c9f3ec82917c3d09d3c9a2d32f5.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      },
+      "talento": {
+        "tipo": "aprendiz",
+        "atributoPrincipal": "finalizacao"
+      }
     },
     "1477432799958011904": {
       "id": "1477432799958011904",
       "nome": "nero_karalho",
-      "posicao": "Meio Ofensivo",
+      "posicao": "MEIA",
       "status": {
         "finalizacao": 0,
         "drible": 0,
@@ -533,6 +766,237 @@
     "1414663229690482690": {
       "nome": "zigggz_71964",
       "status": {
+        "finalizacao": 7,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "ultimoTreinoTimestamp": 1781387363127,
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "finalizacoes": 2
+      },
+      "habilidades": {
+        "kaiserImpact": {
+          "nome": "Kaiser Impact",
+          "usosRestantes": 0
+        },
+        "beeShot": {
+          "nome": "Bee Shot",
+          "usosRestantes": 0
+        }
+      },
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "_statusTotal": {
+        "finalizacao": 38,
+        "drible": 10,
+        "passe": 8,
+        "desarme": 2,
+        "velocidade": 3,
+        "fisico": 4,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 5
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "1414663229690482690",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1780795660161,
+        "flags": 1,
+        "avatarDecorationData": null,
+        "displayName": "Zig",
+        "roles": [
+          "1505613300954693912",
+          "1512852057319669760",
+          "1509603694226706433",
+          "1509596816037908611",
+          "1509538222135312394",
+          "1509624640136286218",
+          "1509623847043731600",
+          "1509590179445346577",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509940078237978774",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509590800072442077",
+          "1509605001801236510",
+          "1509629238674718750",
+          "1509598037180154078",
+          "1508274120528232542",
+          "1509598352176840744",
+          "1509601842110136361",
+          "1509535186235293868",
+          "1505613764588867696",
+          "1509535244032938044",
+          "1509589664955371711"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/1414663229690482690/8b87ad6cec91c17439c92fea069989b7.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      }
+    },
+    "591735465271492608": {
+      "nome": "mimity4u",
+      "status": {
+        "finalizacao": 0,
+        "drible": 10,
+        "passe": 0,
+        "desarme": 15,
+        "velocidade": 15,
+        "fisico": 0,
+        "interceptacao": 15,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "finalizacoes": 3,
+        "pdr": 0
+      },
+      "habilidades": {
+        "crowAnalysis": {
+          "nome": "Crow Analysis",
+          "usosRestantes": 0
+        }
+      },
+      "_statusTotal": {
+        "finalizacao": 13,
+        "drible": 5,
+        "passe": 5,
+        "desarme": 18,
+        "velocidade": 6,
+        "fisico": 4,
+        "interceptacao": 4,
+        "defesaGk": 0,
+        "dominio": 3
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "591735465271492608",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1779893401778,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "' 𝐌imi",
+        "roles": [
+          "1505613300954693912",
+          "1512852057319669760",
+          "1509603694226706433",
+          "1509541492497191103",
+          "1509604075195338822",
+          "1509624640136286218",
+          "1509597555720458250",
+          "1515434424668389516",
+          "1509623847043731600",
+          "1509590179445346577",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509590800072442077",
+          "1509598037180154078",
+          "1509598352176840744",
+          "1509535186235293868",
+          "1509624151780884530",
+          "1509938143611195443",
+          "1509539547036389498",
+          "1509535244032938044",
+          "1509602771823759421",
+          "1509589664955371711"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/591735465271492608/5a58b40196f7da36138cd8da5c00b613.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      },
+      "pontosTreino": 0,
+      "ultimoTreinoTimestamp": 1781397994018
+    },
+    "1466984388746018826": {
+      "id": "1466984388746018826",
+      "nome": "jgabrielfm25021",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1458524593928278150": {
+      "nome": "menino_ney01_",
+      "status": {
         "finalizacao": 0,
         "drible": 0,
         "passe": 0,
@@ -545,8 +1009,6 @@
       },
       "rolls": {},
       "rollsDisponiveis": {},
-      "pontosTreino": 4,
-      "ultimoTreinoTimestamp": 1781296482550,
       "estatisticas": {
         "gols": 0,
         "assistencias": 0,
@@ -561,8 +1023,136 @@
       },
       "habilidades": {}
     },
-    "591735465271492608": {
-      "nome": "mimity4u",
+    "1465891594140913775": {
+      "id": "1465891594140913775",
+      "nome": "silva_26k",
+      "posicao": "Meio Ofensivo",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1032353004797562910": {
+      "id": "1032353004797562910",
+      "nome": "killzin_",
+      "posicao": "LATERAL",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0,
+        "finalizacoes": 1
+      },
+      "habilidades": {
+        "powerShot": {
+          "nome": "Power Shot",
+          "usosRestantes": 1
+        }
+      },
+      "imagem": null,
+      "talento": {
+        "tipo": "gênio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "_statusTotal": {
+        "finalizacao": 20,
+        "drible": 15,
+        "passe": 5,
+        "desarme": 0,
+        "velocidade": 5,
+        "fisico": 2,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 4
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "1032353004797562910",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1780838918656,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "The Killzin",
+        "roles": [
+          "1505613300954693912",
+          "1509599485347758080",
+          "1509603694226706433",
+          "1509939338673258496",
+          "1509596816037908611",
+          "1509598722185494728",
+          "1509624640136286218",
+          "1509541491230642379",
+          "1509611095860707600",
+          "1509590179445346577",
+          "1509623847043731600",
+          "1509598841228234832",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509591155174801558",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1509598037180154078",
+          "1508274120528232542",
+          "1509596964512338020",
+          "1509535186235293868",
+          "1509589184292327607",
+          "1509605147523682424",
+          "1509539549607366847"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/1032353004797562910/9fb9a33f06ec03082c5603999329585f.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      }
+    },
+    "1372338731343810614": {
+      "nome": "morales.zt",
       "status": {
         "finalizacao": 0,
         "drible": 0,
@@ -575,41 +1165,224 @@
         "dominio": 0
       },
       "rolls": {},
-      "rollsDisponiveis": {}
+      "rollsDisponiveis": {},
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {}
+    },
+    "1316875048740589590": {
+      "id": "1316875048740589590",
+      "nome": "gabriel5670903",
+      "posicao": "MEIA",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
+    },
+    "1320080027404210268": {
+      "id": "1320080027404210268",
+      "nome": "antruii",
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 4,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "habilidades": {
+        "africaCrush": {
+          "nome": "Africa Crush",
+          "usosRestantes": 0
+        }
+      },
+      "estatisticas": {
+        "gols": 0,
+        "finalizacoes": 3,
+        "partidas": 0
+      },
+      "_statusTotal": {
+        "finalizacao": 25,
+        "drible": 4,
+        "passe": 4,
+        "desarme": 19,
+        "velocidade": 7,
+        "fisico": 8,
+        "interceptacao": 6,
+        "defesaGk": 4,
+        "dominio": 10
+      },
+      "_membro": {
+        "guildId": "1505613300954693912",
+        "premiumSinceTimestamp": null,
+        "nickname": null,
+        "pending": false,
+        "communicationDisabledUntilTimestamp": null,
+        "userId": "1320080027404210268",
+        "avatar": null,
+        "banner": null,
+        "joinedTimestamp": 1781379594708,
+        "flags": 0,
+        "avatarDecorationData": null,
+        "displayName": "antruii",
+        "roles": [
+          "1505613300954693912",
+          "1509603694226706433",
+          "1509602242720829641",
+          "1509598841228234832",
+          "1509590179445346577",
+          "1509610976390156369",
+          "1509534801009574099",
+          "1509535197039952084",
+          "1509940078237978774",
+          "1509588985222271066",
+          "1509596494255227035",
+          "1508274120528232542",
+          "1509598037180154078",
+          "1509590604760481952",
+          "1509598352176840744",
+          "1509535186235293868",
+          "1509535244032938044",
+          "1509589868664062062",
+          "1509627694579581040",
+          "1509597251817836594",
+          "1509538428335951932"
+        ],
+        "avatarURL": null,
+        "bannerURL": null,
+        "displayAvatarURL": "https://cdn.discordapp.com/avatars/1320080027404210268/8034d61ea65fd848ef023772876615af.webp",
+        "displayBannerURL": null,
+        "avatarDecorationURL": null
+      },
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "pontosTreino": 0,
+      "ultimoTreinoTimestamp": 1781387369837
+    },
+    "325598861630373888": {
+      "id": "325598861630373888",
+      "nome": ".nixiz",
+      "posicao": null,
+      "talento": {
+        "tipo": "gênio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "rolls": {},
+      "rollsDisponiveis": {},
+      "imagem": null,
+      "pontosTreino": 5,
+      "ultimoTreinoTimestamp": 1781397054612
+    },
+    "1483596468500697098": {
+      "id": "1483596468500697098",
+      "nome": "rzzzzzzzzz",
+      "posicao": "Meio Ofensivo",
+      "talento": {
+        "tipo": "prodígio",
+        "atributoPrincipal": "finalizacao"
+      },
+      "status": {
+        "finalizacao": 0,
+        "drible": 0,
+        "passe": 0,
+        "desarme": 0,
+        "velocidade": 0,
+        "fisico": 0,
+        "interceptacao": 0,
+        "defesaGk": 0,
+        "dominio": 0
+      },
+      "estatisticas": {
+        "gols": 0,
+        "assistencias": 0,
+        "passes": 0,
+        "dribles": 0,
+        "desarmes": 0,
+        "interceptacoes": 0,
+        "defesas": 0,
+        "bloqueios": 0,
+        "partidas": 0,
+        "vitorias": 0
+      },
+      "habilidades": {},
+      "imagem": null
     }
   },
   "partidas": {
     "partida_1505614096320565369": {
-      "timeCasa": "silver",
-      "timeFora": "caiky",
+      "timeCasa": "cafajestechucro",
+      "timeFora": "luzdosolhosseus",
       "golsCasa": 0,
       "golsFora": 0,
-      "posse": "1366813437606232135",
-      "posseNome": "shipsahur",
-      "minuto": 9,
+      "posse": null,
+      "posseNome": null,
+      "minuto": 0,
       "tempo": "1º Tempo",
       "ativa": true,
       "canal": "1505614096320565369",
-      "jogadores": {
-        "1366813437606232135": {
-          "nome": "shipsahur",
-          "setor": "C8",
-          "time": "caiky",
-          "timeTipo": "fora",
-          "posicao": "centro_avante",
-          "posicaoNome": "Centro Avante",
-          "zona": "ataque"
-        },
-        "892080349021081702": {
-          "nome": "shinowakasaki",
-          "setor": "C8",
-          "time": "silver",
-          "timeTipo": "casa",
-          "posicao": "meio_ofensivo",
-          "posicaoNome": "Meio Ofensivo",
-          "zona": "meio_campo"
-        }
-      },
+      "jogadores": {},
       "estatisticas": {},
       "ultimoPasse": null,
       "aguardandoDominio": false,
@@ -618,50 +1391,21 @@
       "chutePendente": null,
       "aguardandoPontapeAposGol": false,
       "ultimoGol": null,
-      "prioridades": {
-        "1366813437606232135": {
-          "contra": "892080349021081702",
-          "turnos": 1
-        },
-        "892080349021081702": {
-          "contra": "1366813437606232135",
-          "turnos": 1
-        }
-      },
-      "faltas": {
-        "892080349021081702": {
-          "quantidade": 1,
-          "cartoes": []
-        },
-        "1366813437606232135": {
-          "quantidade": 1,
-          "cartoes": []
-        }
-      },
+      "prioridades": {},
+      "faltas": {},
       "times": {
-        "silver": {
-          "jogadores": [
-            "892080349021081702"
-          ],
+        "cafajestechucro": {
+          "jogadores": [],
           "gols": 0
         },
-        "caiky": {
-          "jogadores": [
-            "1366813437606232135"
-          ],
+        "luzdosolhosseus": {
+          "jogadores": [],
           "gols": 0
         }
       },
       "placar": {
         "casa": 0,
         "fora": 0
-      },
-      "aguardandoFalta": true,
-      "faltaPendente": {
-        "sofredor": "892080349021081702",
-        "faltoso": "1366813437606232135",
-        "setor": "C8",
-        "timeAtacante": "silver"
       }
     },
     "partida_1505614171562053672": {
@@ -792,26 +1536,6 @@
             "dominio": 0
           }
         },
-        "1435070343709593720": {
-          "nome": "carro0429",
-          "setor": "C12",
-          "time": "bastard",
-          "timeTipo": "casa",
-          "posicao": "Atacante",
-          "marcadoPor": null,
-          "turnosMarcado": 0,
-          "status": {
-            "finalizacao": 0,
-            "drible": 0,
-            "passe": 0,
-            "desarme": 0,
-            "defesaGk": 0,
-            "fisico": 0,
-            "velocidade": 0,
-            "interceptacao": 0,
-            "dominio": 0
-          }
-        },
         "1288909739840901173": {
           "nome": "oliveir___",
           "setor": "C18",
@@ -883,28 +1607,21 @@
       }
     },
     "partida_1505614091308499155": {
-      "timeCasa": "chelsea",
-      "timeFora": "bastard",
+      "timeCasa": "meupropiopaismeenganou",
+      "timeFora": "temummonstronojogo",
       "golsCasa": 0,
       "golsFora": 0,
       "posse": null,
       "posseNome": null,
       "minuto": 0,
-      "ativa": true,
+      "tempo": "1º Tempo",
+      "ativa": false,
       "canal": "1505614091308499155",
-      "jogadores": {
-        "772060684417499156": {
-          "nome": "dezinhoz",
-          "setor": 11,
-          "time": "chelsea",
-          "timeTipo": "casa",
-          "posicao": "Atacante"
-        }
-      },
+      "jogadores": {},
       "estatisticas": {},
       "ultimoPasse": null,
       "aguardandoDominio": false,
-      "bolaSetor": null,
+      "bolaSetor": "C13",
       "aguardandoChute": false,
       "chutePendente": null,
       "aguardandoPontapeAposGol": false,
@@ -912,22 +1629,18 @@
       "prioridades": {},
       "faltas": {},
       "times": {
-        "chelsea": {
+        "meupropiopaismeenganou": {
           "jogadores": [],
           "gols": 0
         },
-        "bastard": {
+        "temummonstronojogo": {
           "jogadores": [],
           "gols": 0
-        },
-        "casa": {
-          "jogadores": [
-            "772060684417499156"
-          ]
-        },
-        "fora": {
-          "jogadores": []
         }
+      },
+      "placar": {
+        "casa": 0,
+        "fora": 0
       }
     },
     "partida_1505614335203086449": {
@@ -1087,6 +1800,70 @@
         "casa": 0,
         "fora": 0
       }
+    },
+    "partida_1505614339426488480": {
+      "ativa": false,
+      "timeCasa": "Brasil",
+      "timeFora": "Marrocos",
+      "golsCasa": 0,
+      "golsFora": 0,
+      "jogadores": {
+        "1477432799958011904": {
+          "nome": "nero_karalho",
+          "time": "Brasil",
+          "timeTipo": "casa"
+        },
+        "892080349021081702": {
+          "nome": "shinowakasaki",
+          "time": "Brasil",
+          "timeTipo": "casa"
+        },
+        "772060684417499156": {
+          "nome": "dezinhoz",
+          "time": "Brasil",
+          "timeTipo": "casa"
+        },
+        "1366813437606232135": {
+          "nome": "shipsahur",
+          "time": "Marrocos",
+          "timeTipo": "fora"
+        },
+        "1465891594140913775": {
+          "nome": "silva_26k",
+          "time": "Brasil",
+          "timeTipo": "casa"
+        },
+        "1032353004797562910": {
+          "nome": "killzin_",
+          "time": "Brasil",
+          "timeTipo": "casa"
+        },
+        "1475323630299648162": {
+          "nome": "kiu04343",
+          "time": "Marrocos",
+          "timeTipo": "fora"
+        }
+      },
+      "times": {
+        "Brasil": {
+          "jogadores": [
+            "1477432799958011904",
+            "892080349021081702",
+            "772060684417499156",
+            "1465891594140913775",
+            "1032353004797562910"
+          ]
+        },
+        "Marrocos": {
+          "jogadores": [
+            "1366813437606232135",
+            "1475323630299648162"
+          ]
+        }
+      },
+      "posse": null,
+      "minuto": 0,
+      "tempo": "1º Tempo"
     }
   }
 }
