@@ -68,6 +68,13 @@ const universidadeNomes = Object.keys(bonusUniversidade);
 const dominanciaNomes = Object.keys(bonusDominancia);
 const maestriaNomes = Object.keys(bonusMaestria);
 
+// Cargos exatos de Talentos no Discord
+const talentoCargos = [
+    "๑˚ ꒱꒱ Prodigio ⏜ ︵ ₊⊹",
+    "๑˚ ꒱꒱ Aprendiz Talentoso ⏜ ︵ ₊⊹",
+    "๑˚ ꒱꒱ Genio ⏜ ︵ ₊⊹"
+];
+
 // Status padrão para novo jogador
 const STATUS_PADRAO = {
     finalizacao: 0,
@@ -87,6 +94,10 @@ function criarJogador(id, nome) {
         id: id,
         nome: nome,
         posicao: "Meio Ofensivo",
+        talento: {
+            tipo: "nenhum",             // "gênio", "aprendiz" ou "prodígio"
+            atributoPrincipal: "finalizacao"
+        },
         status: { ...STATUS_PADRAO },
         estatisticas: {
             gols: 0,
@@ -105,9 +116,48 @@ function criarJogador(id, nome) {
     };
 }
 
+// Função auxiliar: garantir que o jogador tenha TODOS os status
+function garantirStatusJogador(jogador) {
+    if (!jogador.status) {
+        jogador.status = {};
+    }
+    
+    // ✅ CORRIGIR: se existir "defenseGk" (errado), copia para "defesaGk" (certo) e remove o errado
+    if (jogador.status.defenseGk !== undefined) {
+        jogador.status.defesaGk = jogador.status.defenseGk;
+        delete jogador.status.defenseGk;
+    }
+    
+    // ✅ Garantir que TODOS os atributos existam com valor padrão 0
+    const atributos = ['finalizacao', 'drible', 'passe', 'desarme', 'velocidade', 'fisico', 'interceptacao', 'defesaGk', 'dominio'];
+    atributos.forEach(attr => {
+        if (jogador.status[attr] === undefined || jogador.status[attr] === null) {
+            jogador.status[attr] = 0;
+        }
+    });
+    
+    return jogador;
+}
+
+// Retorna as informações detalhadas de cada talento e a cor apropriada
+function obterInfoTalento(talento) {
+    const tipo = talento && talento.tipo ? talento.tipo.toLowerCase() : "nenhum";
+    
+    if (tipo.includes('gênio') || tipo.includes('genio') || tipo.includes('⭐️')) {
+        return { nome: "Gênio ⭐️", cor: "#F1C40F" };
+    }
+    if (tipo.includes('aprendiz') || tipo.includes('🧩')) {
+        return { nome: "Aprendiz Talentoso 🧩", cor: "#3498DB" };
+    }
+    if (tipo.includes('prodígio') || tipo.includes('prodigio') || tipo.includes('🧬')) {
+        return { nome: "Prodígio 🧬", cor: "#E74C3C" };
+    }
+    return { nome: "Jogador Comum ⚽", cor: "#95A5A6" };
+}
+
 module.exports = {
     name: 'status',
-    description: 'Mostra os status do jogador com todos os bônus (armas calculadas, não mostradas)',
+    description: 'Mostra os status do jogador com todos os bônus e talentos aplicados',
     aliases: ['stats', 'perfil'],
     async execute(message, args, client, context) {
         let dados = {};
@@ -125,10 +175,8 @@ module.exports = {
         
         const jogador = dados.jogadores[target.id];
         
-        // Garante que o status existe
-        if (!jogador.status) {
-            jogador.status = { ...STATUS_PADRAO };
-        }
+        // ✅ GARANTIR QUE O JOGADOR TENHA TODOS OS STATUS CORRETOS
+        garantirStatusJogador(jogador);
         
         // Garante que as estatísticas existem
         if (!jogador.estatisticas) {
@@ -142,6 +190,14 @@ module.exports = {
         // Garante que as habilidades existem
         if (!jogador.habilidades) {
             jogador.habilidades = {};
+        }
+
+        // Garante que a estrutura de talento existe
+        if (!jogador.talento) {
+            jogador.talento = {
+                tipo: "nenhum",
+                atributoPrincipal: "finalizacao"
+            };
         }
         
         const membro = await message.guild.members.fetch(target.id).catch(() => null);
@@ -178,12 +234,31 @@ module.exports = {
         const universidade = encontrarCargo(universidadeNomes);
         const dominancia = encontrarCargo(dominanciaNomes);
         const maestria = encontrarCargo(maestriaNomes);
+
+        // 👑 DETECTA E ATUALIZA O TALENTO VIA CARGOS DO DISCORD
+        const talentoCargo = encontrarCargo(talentoCargos);
+        let tipoTalento = "nenhum";
+        
+        if (talentoCargo) {
+            const nomeCargoMinusculo = talentoCargo.toLowerCase();
+            if (nomeCargoMinusculo.includes("prodigio")) {
+                tipoTalento = "prodígio";
+            } else if (nomeCargoMinusculo.includes("aprendiz")) {
+                tipoTalento = "aprendiz";
+            } else if (nomeCargoMinusculo.includes("genio")) {
+                tipoTalento = "gênio";
+            }
+        }
+        
+        // Sincroniza dinamicamente o talento no JSON do jogador
+        jogador.talento.tipo = tipoTalento;
         
         // Buscar armas (para calcular bônus, mas não mostrar)
         const todasHabilidades = listarTodasHabilidades();
         const todosNomesArmas = Object.values(todasHabilidades).map(h => h.nome);
         const armasCargo = encontrarTodosCargos(todosNomesArmas);
         
+        // ✅ STATUS BASE (garantido que não é undefined)
         const statusBase = {
             finalizacao: jogador.status.finalizacao || 0,
             drible: jogador.status.drible || 0,
@@ -196,14 +271,27 @@ module.exports = {
             dominio: jogador.status.dominio || 0
         };
         
+        // ✅ BONUS TOTAL (tudo padronizado como defesaGk)
         const bonusTotal = { 
-            finalizacao: 0, drible: 0, passe: 0, desarme: 0, 
-            velocidade: 0, fisico: 0, interceptacao: 0, defesaGk: 0, dominio: 0 
+            finalizacao: 0, 
+            drible: 0, 
+            passe: 0, 
+            desarme: 0, 
+            velocidade: 0, 
+            fisico: 0, 
+            interceptacao: 0, 
+            defesaGk: 0,  // ✅ CORRIGIDO: era "defenseGk"
+            dominio: 0 
         };
         
         function somarBonus(bonus) {
             for (const [attr, val] of Object.entries(bonus)) {
-                if (bonusTotal[attr] !== undefined) bonusTotal[attr] += val;
+                // ✅ CORRIGIR: se vier "defenseGk", somar em "defesaGk"
+                if (attr === 'defenseGk') {
+                    bonusTotal.defesaGk = (bonusTotal.defesaGk || 0) + val;
+                } else if (bonusTotal[attr] !== undefined) {
+                    bonusTotal[attr] += val;
+                }
             }
         }
         
@@ -220,7 +308,25 @@ module.exports = {
                 somarBonus(habInfo.bonus);
             }
         }
+
+        // Regra Especial do Talento Prodígio 🧬: +8 permanente no seu maior atributo base
+        const infoTalento = obterInfoTalento(jogador.talento);
+        if (tipoTalento === "prodígio") {
+            let maiorAtributo = "finalizacao";
+            let maiorValor = -1;
+            Object.entries(statusBase).forEach(([key, val]) => {
+                if (val > maiorValor) {
+                    maiorValor = val;
+                    maiorAtributo = key;
+                }
+            });
+            // Adiciona o bônus de Especialização Extrema diretamente ao bônus total calculado
+            if (bonusTotal[maiorAtributo] !== undefined) {
+                bonusTotal[maiorAtributo] += 8;
+            }
+        }
         
+        // ✅ CALCULAR STATUS TOTAL
         const statusTotal = {};
         for (const attr of Object.keys(statusBase)) {
             statusTotal[attr] = statusBase[attr] + (bonusTotal[attr] || 0);
@@ -236,13 +342,20 @@ module.exports = {
         if (universidade) bonusAtivos += `🏫 Universidade: ${universidade}\n`;
         if (dominancia) bonusAtivos += `🦶 Dominância: ${dominancia}\n`;
         if (maestria) bonusAtivos += `📜 Maestria: ${maestria}\n`;
+        if (jogador.talento.tipo !== "nenhum") bonusAtivos += `👑 Talento: ${infoTalento.nome}\n`;
         if (armasCargo.length > 0) bonusAtivos += `⚔️ Armas: ${armasCargo.length} equipada(s)\n`;
         if (!bonusAtivos) bonusAtivos = 'Nenhum bônus ativo';
         
+        // ✅ Garantir que defesaGk não seja undefined na exibição
+        const defesaGkBase = statusBase.defesaGk || 0;
+        const defesaGkBonus = bonusTotal.defesaGk || 0;
+        const defesaGkTotal = statusTotal.defesaGk || 0;
+        
         let texto = 
             `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 👤 ⦘**  **__Jogador__** —  \`${jogador.nome || target.username}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 📈 ⦘**  **__Status Médio__** —  \`${statusMedio}\`\n\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 👤 ⦘** **__Jogador__** —  \`${jogador.nome || target.username}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 👑 ⦘** **__Talento__** —  \`${infoTalento.nome}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 📈 ⦘** **__Status Médio__** —  \`${statusMedio}\`\n\n` +
             `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
             
             `> ˚ ˳ ﹙🎁﹚***__Bônus Ativos__***\n\n` +
@@ -250,25 +363,25 @@ module.exports = {
             `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
             
             `> ˚ ˳ ﹙📊﹚***__Status__*** *(Base + Bônus = Total)*\n\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🦵 ⦘**  **__Finalização__** —  \`${statusBase.finalizacao} + ${bonusTotal.finalizacao} = ${statusTotal.finalizacao}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ ✨ ⦘**  **__Drible__** —  \`${statusBase.drible} + ${bonusTotal.drible} = ${statusTotal.drible}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ ☄️ ⦘**  **__Passe__** —  \`${statusBase.passe} + ${bonusTotal.passe} = ${statusTotal.passe}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🛡️ ⦘**  **__Desarme__** —  \`${statusBase.desarme} + ${bonusTotal.desarme} = ${statusTotal.desarme}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚡ ⦘**  **__Velocidade__** —  \`${statusBase.velocidade} + ${bonusTotal.velocidade} = ${statusTotal.velocidade}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 💪 ⦘**  **__Físico__** —  \`${statusBase.fisico} + ${bonusTotal.fisico} = ${statusTotal.fisico}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎯 ⦘**  **__Interceptação__** —  \`${statusBase.interceptacao} + ${bonusTotal.interceptacao} = ${statusTotal.interceptacao}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🧱 ⦘**  **__Defesa GK__** —  \`${statusBase.defesaGk} + ${bonusTotal.defesaGk} = ${statusTotal.defesaGk}\`\n` +
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚽ ⦘**  **__Domínio__** —  \`${statusBase.dominio} + ${bonusTotal.dominio} = ${statusTotal.dominio}\`\n\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🦵 ⦘** **__Finalização__** —  \`${statusBase.finalizacao || 0} + ${bonusTotal.finalizacao || 0} = ${statusTotal.finalizacao || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ ✨ ⦘** **__Drible__** —  \`${statusBase.drible || 0} + ${bonusTotal.drible || 0} = ${statusTotal.drible || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ ☄️ ⦘** **__Passe__** —  \`${statusBase.passe || 0} + ${bonusTotal.passe || 0} = ${statusTotal.passe || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🛡️ ⦘** **__Desarme__** —  \`${statusBase.desarme || 0} + ${bonusTotal.desarme || 0} = ${statusTotal.desarme || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚡ ⦘** **__Velocidade__** —  \`${statusBase.velocidade || 0} + ${bonusTotal.velocidade || 0} = ${statusTotal.velocidade || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 💪 ⦘** **__Físico__** —  \`${statusBase.fisico || 0} + ${bonusTotal.fisico || 0} = ${statusTotal.fisico || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🎯 ⦘** **__Interceptação__** —  \`${statusBase.interceptacao || 0} + ${bonusTotal.interceptacao || 0} = ${statusTotal.interceptacao || 0}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 🧱 ⦘** **__Defesa GK__** —  \`${defesaGkBase} + ${defesaGkBonus} = ${defesaGkTotal}\`\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ ⚽ ⦘** **__Domínio__** —  \`${statusBase.dominio || 0} + ${bonusTotal.dominio || 0} = ${statusTotal.dominio || 0}\`\n\n` +
             `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑\n\n` +
             
-            `> **𓂂𝅙ֺ𝅙ִ ⦗ 📛 ⦘**  **__Geral__** —  __***Use c!armas para ver detalhes das suas armas!***__\n\n` +
+            `> **𓂂𝅙ֺ𝅙ִ ⦗ 📛 ⦘** **__Geral__** —  __***Use c!armas para ver detalhes das suas armas!***__\n\n` +
             `⭑ ₊ ˚ 𖦹 ────────────⊱﹝⚽﹞⊰──────────── 𖦹 ˚ ₊ ⭑`;
 
-        // Salva apenas se houve modificações
+        // Salva as modificações no JSON do jogador sincronizando o talento encontrado nos cargos do Discord
         fs.writeFileSync(blueLockPath, JSON.stringify(dados, null, 2));
 
         const embed = new EmbedBuilder()
-            .setColor('#00BFFF')
+            .setColor(infoTalento.cor)
             .setAuthor({ name: `⚽ ${jogador.nome || target.username} • Blue Lock`, iconURL: target.displayAvatarURL() })
             .setTitle('˚ ˳ ﹙📊﹚ATRIBUTOS DE JOGO')
             .setThumbnail(target.displayAvatarURL({ dynamic: true, size: 512 }))
@@ -277,6 +390,9 @@ module.exports = {
             .setFooter({ text: '⚽ Blue Lock • Base + Bônus = Total | Armas em c!armas' })
             .setTimestamp();
         
-        return message.reply({ embeds: [embed] });
+        return message.reply({ 
+            embeds: [embed],
+            allowedMentions: { repliedUser: false }
+        });
     }
 };
